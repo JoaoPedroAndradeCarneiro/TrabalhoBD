@@ -46,7 +46,7 @@ CREATE TABLE Historico(
 	STATUS 		varchar(20) NOT NULL,
 	CodFunc		int,
 	Data_ini	DATE NOT NULL,
-	Data_fim	DATE NOT NULL,
+	Data_fim	DATE,
 	FOREIGN KEY (CodFunc) REFERENCES Funcionario(CodFunc)
 );
 
