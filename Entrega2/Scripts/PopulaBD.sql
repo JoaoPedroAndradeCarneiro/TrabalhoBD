@@ -8,21 +8,6 @@ USE Trabalho;
 
 -- DELETE FROM Medico;
 
--- POPULADOS: 	Funcionario
--- 				Administrativo
--- 				Medico
--- 				Enfermeiro
--- 				Setor
--- 				Consultorio
--- 				Paciente
--- 				Remedios
--- 				RemedioUnidade
--- 				Estoque
--- 				ConsultCli
---	 			Historico
-
--- FALTANDO: 	Consulta
-
 INSERT INTO Funcionario (CodFunc, Nome, Vinculo)
 VALUES  (1,'João Silva', 'CLT'), -- Usado
 		(2,'Maria Oliveira', 'CLT'), -- Usado
@@ -55,29 +40,30 @@ VALUES  (1,'João Silva', 'CLT'), -- Usado
     	(29, 'Bruno Costa', 'CLT'),
     	(30, 'Viviane Santos', 'CNPJ');
 
-INSERT INTO Setor(CodSet, NomeSet, Local, CodFunc)
+INSERT INTO Setor (CodSet, NomeSet, Local, CodFunc)
 VALUES	(1, 'Administrativo', 'Bloco A', 1),
-		(2, 'Financeiro', 'Bloco B', 2),
-		(3, 'Recursos Humanos', 'Bloco C', 3),
-		(4, 'Recepção', 'Hall', 4),
-		(5, 'Trauma', 'Bloco D', 5),
-		(6, 'UTI', 'Bloco E', 6),
-		(7, 'Cardiologia', 'Bloco G', 7),
-		(8, 'Berçario', 'Bloco F', 8),
-		(9, 'Pré-natal', 'Bloco H', 9),
-		(10, 'Oncologia', 'Bloco I', 10);
+	    (2, 'Financeiro', 'Bloco B', 2),
+	    (3, 'Recursos Humanos', 'Bloco C', 3),
+	    (4, 'Recepção', 'Hall', 4),
+	    (5, 'Des. de Disp. Biom.', 'Bloco D', 5),
+	    (6, 'Tec. da Inf.', 'Bloco E', 6),
+	    (7, 'Suporte Técnico', 'Bloco F', 7),
+	    (8, 'Projetos', 'Bloco G', 8),
+	    (9, 'Manut. de Equip. Méd', 'Bloco H', 9),
+	    (10, 'Pesq. em Eng. Biom.', 'Bloco I', 10);
+
 
 INSERT INTO Administrativo(CodFunc, CodSet, Cargo)
 VALUES	(1, 1, 'Gerente'),
-		(2, 2, 'Analista Financeiro'),
-		(3, 3, 'Gerente de RH'),
+		(2, 2, 'Analista'),
+		(3, 3, 'Gerente'),
 		(4, 4, 'Recepcionista'),
-		(5, 5, 'Assist ADM'),
+		(5, 5, 'Analista'),
     	(6, 6, 'Supervisor'),
-    	(7, 7, 'Coord de Projetos'),
-    	(8, 8, 'Analista de TI'),
-    	(9, 9, 'Aux de Escritório'),
-    	(10, 10, 'Contador');
+    	(7, 7, 'Coordenador'),
+    	(8, 8, 'Analista'),
+    	(9, 9, 'Analista'),
+    	(10, 10, 'Pesquisador');
 
 INSERT INTO Medico (CodFunc, CRM, Especializacao)
 VALUES	(11, '123456-SP', 'Cardiologia'),
@@ -194,6 +180,29 @@ VALUES	(1, 'Funcionário ativo no setor administrativo.', 'Ativo', 1, '2023-01-0
 	    (8, 'Funcionário ativo no setor do berçário.', 'Ativo', 8, '2023-06-01', NULL),
 	    (9, 'Funcionário inativo após demissão.', 'Inativo', 9, '2021-03-15', '2021-03-15'),
 	    (10, 'Funcionário ativo no setor de oncologia.', 'Ativo', 10, '2022-07-01', NULL);
+
+INSERT INTO Historico (CodHist, Descricao, STATUS, CodFunc, Data_ini, Data_fim)
+VALUES	(11, 'Funcionário ativo no setor financeiro.', 'Ativo', 11, '2023-01-15', NULL),
+	    (12, 'Funcionário inativo após projeto concluído.', 'Inativo', 12, '2022-06-01', '2023-06-01'),
+	    (13, 'Funcionário ativo na recepção.', 'Ativo', 13, '2024-02-01', NULL),
+	    (14, 'Funcionário inativo após término do contrato.', 'Inativo', 14, '2021-05-01', '2021-05-31'),
+	    (15, 'Funcionário ativo no setor de TI.', 'Ativo', 15, '2023-09-01', NULL),
+	    (16, 'Funcionário inativo por licença médica.', 'Inativo', 16, '2024-03-01', '2024-06-01'),
+	    (17, 'Funcionário ativo no setor jurídico.', 'Ativo', 17, '2023-11-01', NULL),
+	    (18, 'Funcionário inativo após término do contrato.', 'Inativo', 18, '2021-07-01', '2021-07-31'),
+	    (19, 'Funcionário ativo no setor de marketing.', 'Ativo', 19, '2022-10-01', NULL),
+	    (20, 'Funcionário ativo no setor de vendas.', 'Ativo', 20, '2023-05-01', NULL),
+	    (21, 'Funcionário ativo no setor de logística.', 'Ativo', 21, '2022-08-01', NULL),
+	    (22, 'Funcionário ativo no setor administrativo.', 'Ativo', 22, '2023-04-01', NULL),
+	    (23, 'Funcionário inativo após demissão.', 'Inativo', 23, '2021-03-01', '2021-03-01'),
+	    (24, 'Funcionário ativo no setor financeiro.', 'Ativo', 24, '2023-02-01', NULL),
+	    (25, 'Funcionário inativo por licença médica.', 'Inativo', 25, '2024-05-01', '2024-07-01'),
+	    (26, 'Funcionário ativo no setor de RH.', 'Ativo', 26, '2023-07-01', NULL),
+	    (27, 'Funcionário inativo após demissão.', 'Inativo', 27, '2022-09-01', '2022-09-01'),
+	    (28, 'Funcionário ativo no setor de projetos.', 'Ativo', 28, '2023-08-01', NULL),
+	    (29, 'Funcionário ativo no setor de suporte técnico.', 'Ativo', 29, '2023-10-01', NULL),
+	    (30, 'Funcionário inativo após término do contrato.', 'Inativo', 30, '2024-01-01', '2024-03-01');
+
 
 INSERT INTO Consulta (CodFunc, CodUnid, Dia, Hora, CodConsult, CodPac)
 VALUES	(11, 1, '2025-01-15', '09:00:00', 1, 1),
