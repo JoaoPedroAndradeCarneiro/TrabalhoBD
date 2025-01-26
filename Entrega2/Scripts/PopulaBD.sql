@@ -128,7 +128,13 @@ VALUES	(1, 'Paracetamol', 'Analgésico', 'Utilizado para alívio de dores e febr
 	    (7, 'Losartana', 'Antihipertensivo', 'Indicado para controle da pressão arterial.', FALSE),
 	    (8, 'Cetirizina', 'Antialérgico', 'Usado no tratamento de alergias.', FALSE),
 	    (9, 'Rivotril', 'Ansiolítico', 'Usado no tratamento de ansiedade e epilepsia.', TRUE),
-	    (10, 'Prednisona', 'Corticosteroide', 'Indicada para tratamento de inflamações graves.', TRUE);
+	    (10, 'Prednisona', 'Corticosteroide', 'Indicada para tratamento de inflamações graves.', TRUE),
+	    (11, 'Aspirina', 'Analgésico', 'Usado para aliviar dores leves e febres.', 0),
+	    (12, 'Cloroquina', 'Antimalárico', 'Tratamento de malária e doenças autoimunes.', 1),
+	    (13, 'Loratadina', 'Antialérgico', 'Usado no tratamento de alergias e rinite.', 0),
+	    (14, 'Fluoxetina', 'Antidepressivo', 'Utilizado no tratamento de depressão e ansiedade.', 1),
+	    (15, 'Carbamazepina', 'Anticonvulsivante', 'Indicado para o tratamento de epilepsia.', 1);
+
 
 INSERT INTO RemedioUnidade (CodUnid, Lote, DataVenc, Laboratorio, CodRem)
 VALUES	(1, 'L12345', '2025-12-31', 'Laboratório ABC', 1),
@@ -167,7 +173,6 @@ VALUES	(1, 11),
 	    (10, 20);
 
 -- ALTER TABLE Historico MODIFY Data_fim DATE NULL;
-
 
 INSERT INTO Historico (CodHist, Descricao, STATUS, CodFunc, Data_ini, Data_fim)
 VALUES	(1, 'Funcionário ativo no setor administrativo.', 'Ativo', 1, '2023-01-01', NULL),
