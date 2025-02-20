@@ -112,7 +112,7 @@ CREATE TABLE Consulta(
 	CodPac		int,
 	PRIMARY KEY (CodFunc, CodUnid),
 	FOREIGN KEY (CodFunc) REFERENCES Funcionario(CodFunc),
-	FOREIGN KEY (Codunid) REFERENCES RemedioUnidade(CodUnid),
+	FOREIGN KEY (CodUnid) REFERENCES RemedioUnidade(CodUnid),
 	FOREIGN KEY (CodConsult) REFERENCES Consultorio(CodConsult),
 	FOREIGN KEY (CodPac) REFERENCES Paciente(CodPac)
 );
