@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Consultas - Hospital{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="title">Consultas</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Código do Funcinário</th>
+                <th>Código Unidade</th>
+                <th>Dia</th>
+                <th>Hora</th>
+                <th>Código do Consultorio</th>
+                <th>Código do Paciente</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in cons %}
+            <tr>
+                <td>{{ item.codfunc.codfunc }}</td>
+                <td>{{ item.codunid.codunid }}</td>
+                <td>{{ item.dia}}</td>
+                <td>{{ item.hora }}</td>
+                <td>{{ item.codconsult.codconsult }}</td>
+                <td>{{ item.codpac.codpac}}</td>
+
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6">Nenhum item disponível.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+
