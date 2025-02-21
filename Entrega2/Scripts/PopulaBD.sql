@@ -9,26 +9,26 @@ USE Trabalho;
 -- DELETE FROM Medico;
 
 INSERT INTO Funcionario (CodFunc, Nome, Vinculo)
-VALUES  (1,'João Silva', 'CLT'), -- Usado
-		(2,'Maria Oliveira', 'CLT'), -- Usado
-		(3,'Carlos Souza', 'CNPJ'), -- Usado
-		(4,'Yuri Baldi', 'CNPJ'),	 -- Usado
-		(5,'Roberson dos Santos', 'CLT'), -- Usado
-		(6,'Victor Marques', 'CLT'), -- Usado
-		(7,'Daniela Musa', 'CNPJ'), -- Usado
-		(8,'João Carneiro', 'CNPJ'), -- Usado
-		(9,'João Rocha', 'CLT'), -- Usado
-		(10, 'Beatriz Silve', 'CLT'), -- Usado
-		(11, 'Fernanda Almeida', 'CLT'), -- Usado
-    	(12, 'Carlos Mendes', 'CNPJ'), -- Usado
-    	(13, 'Roberto Farias', 'CLT'), -- Usado
-    	(14, 'Aline Castro', 'CNPJ'), -- Usado
-	    (15, 'Gustavo Lima', 'CLT'), -- Usado
-	    (16, 'Patrícia Fonseca', 'CNPJ'), -- Usado
-	    (17, 'Lucas Silva', 'CLT'), -- Usado
-	    (18, 'Ana Paula Santos', 'CNPJ'), -- Usado
-	    (19, 'Fábio Ribeiro', 'CLT'), -- Usado
-	    (20, 'Camila Teixeira', 'CNPJ'), -- Usado
+VALUES  (1,'João Silva', 'CLT'),
+		(2,'Maria Oliveira', 'CLT'),
+		(3,'Carlos Souza', 'CNPJ'),
+		(4,'Yuri Baldi', 'CNPJ')
+		(5,'Roberson dos Santos', 'CLT'),
+		(6,'Victor Marques', 'CLT'),
+		(7,'Daniela Musa', 'CNPJ'),
+		(8,'João Carneiro', 'CNPJ'),
+		(9,'João Rocha', 'CLT'),
+		(10, 'Beatriz Silve', 'CLT'),
+		(11, 'Fernanda Almeida', 'CLT'),
+    	(12, 'Carlos Mendes', 'CNPJ'),
+    	(13, 'Roberto Farias', 'CLT'),
+    	(14, 'Aline Castro', 'CNPJ'),
+	    (15, 'Gustavo Lima', 'CLT'),
+	    (16, 'Patrícia Fonseca', 'CNPJ'),
+	    (17, 'Lucas Silva', 'CLT'),
+	    (18, 'Ana Paula Santos', 'CNPJ'),
+	    (19, 'Fábio Ribeiro', 'CLT'),
+	    (20, 'Camila Teixeira', 'CNPJ'),
 	    (21, 'Rafael Moreira', 'CLT'),
 	    (22, 'Juliana Alves', 'CLT'),
     	(23, 'Marcos Vinícius', 'CNPJ'),
